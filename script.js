@@ -1,9 +1,38 @@
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 
+const main = document.querySelector("#main")
+const cur = document.querySelector("#cur")
+
+
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
+
+
+main.addEventListener('mousemove',(e)=>{
+  gsap.to(cur,{
+    x:e.x,
+    y:e.y,
+    duration:.5
+  })
+})
+
+main.addEventListener('mouseenter',(e)=>{
+  gsap.to(cur,{
+    opacity:1,
+    
+    duration:.3
+  })
+})
+
+main.addEventListener('mouseleave',(e)=>{
+  gsap.to(cur,{
+    opacity:0,
+    
+    duration:.3
+  })
+})
 
 
 function firstPageAnimation() {

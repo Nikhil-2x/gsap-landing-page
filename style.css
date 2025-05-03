@@ -9,3 +9,22 @@
 body{
     overflow-x: hidden;
 }
+
+#cur{
+    height: 30px;
+    width: 30px;
+    z-index: 9;
+    background-color: rgba(182,178,178,0.3);
+    position: fixed;
+    font-size: 12px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#main{
+    cursor: none;
+}
+
+#main *{
+    cursor: none;
+}
